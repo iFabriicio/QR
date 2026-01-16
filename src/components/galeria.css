@@ -1,0 +1,136 @@
+.galeria-container {
+  text-align: center;
+  padding: 5px;
+}
+
+.galeria-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #705a5a;
+  font-weight: bold;
+}
+
+.galeria-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  padding: 10px;
+  min-height: 260px;
+  transition: 0.3s ease;
+}
+
+.galeria-card {
+  width: 110px;
+  height: 90px;
+  padding: 6px;
+
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* 📌 NUEVO — rotaciones variadas para dispersar los cuadros */
+.galeria-card:nth-child(1) { transform: rotate(-6deg); }
+.galeria-card:nth-child(2) { transform: rotate(2deg); }
+.galeria-card:nth-child(3) { transform: rotate(-1deg); }
+.galeria-card:nth-child(4) { transform: rotate(4deg); }
+.galeria-card:nth-child(5) { transform: rotate(-4deg); }
+.galeria-card:nth-child(6) { transform: rotate(3deg); }
+.galeria-card:nth-child(7) { transform: rotate(-2deg); }
+.galeria-card:nth-child(8) { transform: rotate(1deg); }
+.galeria-card:nth-child(9) { transform: rotate(-3deg); }
+.galeria-card:nth-child(10) { transform: rotate(3deg); }
+
+
+/* 🌟 GLASSMORPHISM BORDER — FOTOS */
+.galeria-img {
+  width: 110%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 14px;
+
+  background: rgba(36, 36, 36, 0.1);
+  border: 5px solid rgba(63, 63, 63, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+/* 🔍 ZOOM aplicado correctamente a .galeria-img */
+.galeria-img:hover {
+  transform: scale(1.15);
+  filter: brightness(1.12) saturate(1.15);
+}
+
+.galeria-caption {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* SCROLL MINIMALISTA VERDE */
+.galeria-container {
+  max-height: 265px;
+  overflow-y: auto;
+  padding-right: 4px;
+  
+  scrollbar-width: thin;
+  scrollbar-color: #a8a8a8 transparent;
+}
+
+.galeria-container::-webkit-scrollbar {
+  width: 7px;
+}
+
+.galeria-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.galeria-container::-webkit-scrollbar-thumb {
+
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.foto-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.foto-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* 🔍 Efecto ZOOM suave al pasar el mouse */
+.foto-item:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.12) saturate(1.15);
+}
+
+
+/* Título elegante */
+.foto-titulo {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffffcc;
+  backdrop-filter: blur(4px);
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: inline-block;
+  background: linear-gradient(135deg, #6a5acd66, #00bcd466);
+  transition: 0.3s ease;
+}
+
